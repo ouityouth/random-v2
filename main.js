@@ -5,16 +5,18 @@ var usedNumbers = [];
 function generateRandomNumber() {
     var input = document.getElementById("number-list").value.trim();
     numberList = input.split("\n");
-    if (numberList.length === 0) {
-        alert("Please enter a list of numbers");
+    if (input == "") {
+        alert("Textarea is empty!");
+        return;
+    }
+
+    if (numberList.length === 0 || usedNumbers.length === numberList.length) {
+        alert("All numbers have been used!");
         return;
     }
 
     var randomNumber = null;
-    // if (numberList.length == 0) {
-    //     alert("Vui lòng nhập lại danh sách!");
-    //     return;
-    // }
+    
     do {
         var index = Math.floor(Math.random() * numberList.length);
         randomNumber = numberList[index];

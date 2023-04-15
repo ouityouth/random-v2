@@ -55,7 +55,6 @@ body {
     color: yellow;
     font-weight: 800;
     font-size: 50px;
-    margin-top: -15px;
 }
 
 @keyframes jump {
