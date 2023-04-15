@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <video id="video-background" preload muted autoplay loop>
+		<source src="./bgr.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-light">
+                <div class="text-center" style="margin-top: -50px;">
+                    <img src="./assets/logo ct.png" alt="" width="300px">
+                    <img src="./assets/logo btc.png" alt="" width="300px" id="logo-btc">
+                    <img src="./assets/logo ntt.png" alt="" width="300px" id="logo-ntt">
+                </div>
+                <h1 class="text-center mb-3" style="font-weight: 800;">VÒNG QUAY MAY MẮN</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="number-list">Nhập danh sách số may mắn:</label>
+                        <textarea class="form-control" id="number-list" rows="5"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary" onclick="generateRandomNumber()">Quay số</button>
+                    </div>
+                </form>
+                <div class="mt-2">
+                    <p class="text-center" id="result"></p>
+                </div>
+                <audio id="sound-effect" src="./assets/sound-effect.mp3"></audio>
+		        <audio id="congratulations" src="./assets/congratulations.mp3"></audio>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
